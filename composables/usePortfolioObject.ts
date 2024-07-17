@@ -136,6 +136,20 @@ export default () => {
             source_backend: 'https://github.com/JSTTO31/kioskBackend',
             live_demo: 'local',
         },
+        
+        {
+            id: 'isurvey',
+            title: 'iSurvey: Simplifying Survey Creation, Response, and Management',
+            paragraph: 'iSurvey simplifies the process of creating, responding to, and managing surveys within a single application. Developed to enhance user experience, it allows seamless creation of survey questionnaires, efficient collection of responses, and intuitive management of survey data, making it an essential tool for effective data gathering and analysis',
+            location: '/portfolios/isurvey',
+            images_count: 10,
+            active_image: 2,
+            icons: ['mdi-vuejs', 'mdi-vuetify', 'mdi-laravel'],
+            available: ['lx', 'lg'],
+            source_frontend: 'https://github.com/JSTTO31/KioskFrontendManagement',
+            source_backend: 'https://github.com/JSTTO31/kioskBackend',
+            live_demo: 'local',
+        },
     ]
 
 

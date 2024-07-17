@@ -7,8 +7,11 @@
                 <v-icon size="30" v-for="icon in portfolio.icons" :key="icon">{{icon}}</v-icon>
             </div>
             <div class="mt-5 d-flex" style="gap: 5px">
-                <v-btn prepend-icon="mdi-information" color="warning" disabled flat class="rounded-lg text-capitalize"  v-if="portfolio.live_demo == 'private'">
+                <v-btn prepend-icon="mdi-lock" color="primary" disabled flat class="rounded-lg text-capitalize"  v-if="portfolio.live_demo == 'private'">
                     Private
+                </v-btn>
+                <v-btn prepend-icon="mdi-chip" color="grey" disabled flat class="rounded-lg text-capitalize"  v-else-if="portfolio.live_demo == 'local'">
+                    Local
                 </v-btn>
                 <v-btn v-else variant="flat" prepend-icon="mdi-open-in-new" class="rounded-lg text-capitalize"
                     color="deep-purple" @click.stop="visit(portfolio.live_demo)">Live
