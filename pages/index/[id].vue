@@ -7,13 +7,13 @@
                     :src="portfolio.location + `/${image}.png`" cover>
                 </v-carousel-item>
                 <template v-slot:prev="{ props }">
-                    <v-card flat class="pa-2 h-100 ml-n5 rounded-0 mx-0 d-flex align-center bg-transparent px-5" @click="props.onClick">
-                        <v-icon color="black" size="55" >mdi-chevron-left</v-icon>
+                    <v-card variant="text"  flat class="pa-2 h-100 ml-n5 rounded-0 mx-0 d-flex align-center bg-transparent px-5" @click="props.onClick">
+                        <v-icon size="55" color="black">mdi-chevron-left</v-icon>
                     </v-card>
                 </template>
                 <template v-slot:next="{ props }">
-                    <v-card flat class="pa-2 h-100 mr-n5 rounded-0 mx-0 d-flex align-center bg-transparent px-5" @click="props.onClick">
-                        <v-icon color="black" size="55">mdi-chevron-right</v-icon>
+                    <v-card variant="text" flat class="pa-2 h-100 mr-n5 rounded-0 mx-0 d-flex align-center bg-transparent px-5" @click="props.onClick">
+                        <v-icon size="55" color="black">mdi-chevron-right</v-icon>
                     </v-card>
                 </template>
             </v-carousel>
