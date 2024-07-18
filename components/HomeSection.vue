@@ -52,7 +52,9 @@
                 </v-avatar>
             </v-col>
         </v-row>
-        <v-navigation-drawer location="right" v-model="showMenu">
+    </v-container>
+    <image-slider></image-slider>
+    <v-navigation-drawer location="right" v-model="showMenu" v-if="showMenu">
         <v-list class="pt-15">
             <v-list-item class="text-h5 mt-10 pa-5 mb-2"  @click="goToSection('home')">Home</v-list-item>
             <v-list-item class="text-h5 pa-5 mb-2"  @click="goToSection('about-me')">About me</v-list-item>
@@ -64,9 +66,6 @@
         </v-list>
         <v-btn @click="showMenu = false" style="position: absolute;top: 25px;right: 25px" icon="mdi-close" size="x-large" variant="text"></v-btn>
     </v-navigation-drawer>
-    </v-container>
-    <image-slider></image-slider>
-
 </template>
 
 <script setup lang="ts">
