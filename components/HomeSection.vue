@@ -33,8 +33,8 @@
                     prepend-icon="mdi-download">Download my CV</v-btn>
             </v-col>
             <v-col cols="12" lg="5" class="d-flex justify-center">
-                <v-avatar size="400" class="bg-deep-purple pt-5 px-5">
-                    <v-img src="profile-image.png"></v-img>
+                <v-avatar size="400" class="bg-deep-purple pt-10 px-5">
+                    <nuxt-img class="w-100" src="profile-image.png"></nuxt-img>
                 </v-avatar>
             </v-col>
         </v-row>

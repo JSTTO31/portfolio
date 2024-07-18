@@ -11,17 +11,15 @@
         </div>
         <v-row class="mt-15">
             <v-col cols="6" v-for="service in services" :key="service.title">
-                <v-hover v-slot="{ props, isHovering }">
-                    <v-card v-bind="props" style="user-select: none"
-                        :style="{ borderLeft: '5px solid #673AB7', boxShadow: isHovering ? 'none' : '' }"
-                        class="rounded-lg pa-5 rounded-lg" height="250">
-                        <v-avatar size="50" class="rounded-0 mb-4">
-                            <v-img :src="service.icon + (isHovering ? '.gif' : '.png')"></v-img>
-                        </v-avatar>
-                        <h2 class="mb-3">{{ service.title }}</h2>
-                        <p>{{ service.sentence }}</p>
-                    </v-card>
-                </v-hover>
+                  <v-card style="user-select: none"
+                      :style="{ borderLeft: '5px solid #673AB7' }"
+                      class="rounded-lg pa-5 rounded-lg" height="250">
+                      <v-avatar size="50" class="rounded-0 mb-4">
+                          <nuxt-img class="w-100" :src="service.icon + '.png'"></nuxt-img>
+                      </v-avatar>
+                      <h2 class="mb-3">{{ service.title }}</h2>
+                      <p>{{ service.sentence }}</p>
+                  </v-card>
             </v-col>
         </v-row>
     </v-container>

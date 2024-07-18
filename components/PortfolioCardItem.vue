@@ -1,6 +1,6 @@
 <template>
     <v-card class="portfolio-card rounded-lg" @click="$router.push({ name: 'index-id', params: { id: portfolio.id } })">
-        <v-img :src="portfolio.location + `/${portfolio.active_image}.png`"></v-img>
+        <nuxt-img class="w-100" :src="portfolio.location + `/${portfolio.active_image}.png`"></nuxt-img>
         <div class="pa-5">
             <h3 class="font-weight-bold">{{ portfolio.title }}</h3>
             <div class="mt-2 d-flex" style="gap: 5px">

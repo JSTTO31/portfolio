@@ -13,15 +13,15 @@
                 <v-card class="w-100 pa-5 rounded-lg">
                     <div class="mb-5 d-flex">
                         <v-avatar class="rounded-0">
-                            <v-img src="/logos/html.png"></v-img>
+                            <nuxt-img class="w-100" src="/logos/html.png"></nuxt-img>
                         </v-avatar>
                         <v-icon size="35">mdi-plus</v-icon>
                         <v-avatar class="rounded-0">
-                            <v-img src="/logos/css-3.png"></v-img>
+                            <nuxt-img class="w-100" src="/logos/css-3.png"></nuxt-img>
                         </v-avatar>
                         <v-icon size="35">mdi-plus</v-icon>
                         <v-avatar class="rounded-0">
-                            <v-img src="/logos/bootstrap.png"></v-img>
+                            <nuxt-img class="w-100" src="/logos/bootstrap.png"></nuxt-img>
                         </v-avatar>
                     </div>
                     <h3>HTML, CSS, and Bootstrap Certification</h3>
@@ -34,10 +34,10 @@
                 <v-card class="w-100 pa-5 rounded-lg">
                     <div class="mb-5 d-flex">
                         <v-avatar size="45" class="mr-5 rounded-0">
-                            <v-img src="/logos/php.png"></v-img>
+                            <nuxt-img class="w-100" src="/logos/php.png"></nuxt-img>
                         </v-avatar>
                         <v-avatar size="45" class="mr-5 rounded-0">
-                            <v-img src="/logos/mysql.png"></v-img>
+                            <nuxt-img class="w-100" src="/logos/mysql.png"></nuxt-img>
                         </v-avatar>
                     </div>
                     <h3>PHP and MySQL Certification from Inventive Media Internship</h3>
@@ -52,7 +52,7 @@
                 <v-card class="w-100 pa-5 rounded-lg">
                     <div class="mb-5 d-flex">
                         <v-avatar size="45" class="mr-5 rounded-0">
-                            <v-img src="/logos/wordpress.png"></v-img>
+                            <nuxt-img class="w-100" src="/logos/wordpress.png"></nuxt-img>
                         </v-avatar>
                     </div>
                     <h3>WordPress Certification from Inventive Media</h3>
@@ -67,7 +67,7 @@
                 <v-card class="w-100 pa-5 rounded-lg">
                     <div class="mb-5 d-flex">
                         <v-avatar size="45" class="mr-5 rounded-0">
-                            <v-img src="/logos/azure.png"></v-img>
+                            <nuxt-img class="w-100" src="/logos/azure.png"></nuxt-img>
                         </v-avatar>
                     </div>
                     <h3>Azure Certification from Inventive Media</h3>
@@ -82,7 +82,7 @@
                 <v-card class="w-100 pa-5 rounded-lg">
                     <div class="mb-5 d-flex">
                         <v-avatar size="45" class="mr-5 rounded-0">
-                            <v-img src="/logos/python.png"></v-img>
+                            <nuxt-img class="w-100" src="/logos/python.png"></nuxt-img>
                         </v-avatar>
                     </div>
                     <h3>Python Certification at Inventive Media</h3>
@@ -96,7 +96,7 @@
                 <v-card class="w-100 pa-5 rounded-lg">
                     <div class="mb-5 d-flex">
                         <v-avatar size="45" class="mr-5 rounded-0">
-                            <v-img src="/logos/illustrator.png"></v-img>
+                            <nuxt-img class="w-100" src="/logos/illustrator.png"></nuxt-img>
                         </v-avatar>
                     </div>
                     <h3>Adobe Illustrator Certification at Inventive Media</h3>
