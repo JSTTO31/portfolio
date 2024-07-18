@@ -24,7 +24,7 @@
                 </v-form>
             </v-col>
             <v-col cols="6">
-                <v-img src="/contact.svg"></v-img>
+                <nuxt-img class="w-100" src="/contact.svg"></nuxt-img>
                 <div class="pt-15">
                     <div style="font-size: 17px;" class="text-deep-purple mb-4 d-flex align-center">
                         <v-icon>mdi-facebook</v-icon>
@@ -61,13 +61,18 @@ const rules = {
 
 const $v = useVuelidate(rules, form)
 
+const loading = ref(false)
+
 async function submit(){
     if($v.value.$invalid) return $v.value.$touch();
-
-    await useFetch("https://formsubmit.co/el/meraye",{
+    loading.value = true
+    await useFetch("https://formsubmit.co/25494812c1d7e6c3649ce9c1312f036c ",{
         method: 'POST',
         body: form
     })
+
+    loading.value = false
+
 }
 </script>
 
