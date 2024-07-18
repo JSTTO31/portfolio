@@ -1,5 +1,5 @@
 <template>
-    <v-container class="py-15 mt-15">
+    <v-container id="training" class="py-15 mt-15">
         <div class="w-100 d-flex justify-center flex-column align-center">
             <div style="width: 320px" class=" mb-5">
                 <h1 class="text-center" style="z-index: 10;">Training Certificates</h1>

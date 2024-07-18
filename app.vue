@@ -18,6 +18,9 @@ useSeoMeta({
 })
 </script>
 <style>
+html{
+  scroll-behavior: smooth;
+}
 body{
   background-color: #ede7f6 !important;
 }

@@ -1,5 +1,5 @@
 <template>
-    <v-container>
+    <v-container id="contact">
         <v-row class="mt-15">
             <v-col cols="6" class="pr-10">
                 <div style="width: 210px" class=" mb-5">
@@ -8,7 +8,7 @@
                         class="bg-deep-purple-lighten-2 mt-n3 rounded-pill">
                     </div>
                 </div>
-                <p class="mt-n2">Please contact me for job opportunities or questions. I am excited to join your team
+                <p class="mt-n2 mb-10">Please contact me for job opportunities or questions. I am excited to join your team
                 </p>
                 <contact-form></contact-form>
             </v-col>

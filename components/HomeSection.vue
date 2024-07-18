@@ -1,18 +1,19 @@
 <template>
-    <v-container class="">
+    <v-container class="" id="home">
         <div class="d-flex align-center">
-            <div class="d-flex">
-                <v-avatar class="rounded-0 mr-2 mt-1" size="35"><v-img src="logo.png"></v-img></v-avatar>
+            <div class="d-flex" style="user-select: none;">
+                <v-avatar class="rounded-0 mr-2 mt-1" size="35"><nuxt-img class="w-100" src="logo.png"></nuxt-img></v-avatar>
                 <h1 class="font-weight-bold text-grey-darken-4">JS.</h1>
             </div>
             <v-spacer></v-spacer>
             <v-tabs>
-                <v-tab slider-color="deep-purple" class="text-capitalize font-weight-medium">Home</v-tab>
-                <v-tab slider-color="deep-purple" class="text-capitalize font-weight-medium">Services</v-tab>
-                <v-tab slider-color="deep-purple" class="text-capitalize font-weight-medium">Portfolios</v-tab>
-                <v-tab slider-color="deep-purple" class="text-capitalize font-weight-medium">About me</v-tab>
-                <v-tab slider-color="deep-purple" class="text-capitalize font-weight-medium">Skills</v-tab>
-                <v-tab slider-color="deep-purple" class="text-capitalize font-weight-medium">Testimonials</v-tab>
+                <v-tab @click="goToSection('home')" slider-color="deep-purple" class="text-capitalize font-weight-medium">Home</v-tab>
+                <v-tab @click="goToSection('about-me')" slider-color="deep-purple" class="text-capitalize font-weight-medium">About me</v-tab>
+                <v-tab @click="goToSection('service')" slider-color="deep-purple" class="text-capitalize font-weight-medium">Services</v-tab>
+                <v-tab @click="goToSection('project')" slider-color="deep-purple" class="text-capitalize font-weight-medium">Portfolio</v-tab>
+                <v-tab @click="goToSection('skill')" slider-color="deep-purple" class="text-capitalize font-weight-medium">Skills</v-tab>
+                <v-tab @click="goToSection('training')" slider-color="deep-purple" class="text-capitalize font-weight-medium">Certificates</v-tab>
+                <v-tab @click="goToSection('contact')" slider-color="deep-purple" class="text-capitalize font-weight-medium">Contact</v-tab>
             </v-tabs>
             <v-spacer></v-spacer>
             <v-dialog width="750">
@@ -56,6 +57,14 @@
 
 function visit(url: string){
     window.open(url, "_blank")
+}
+
+function goToSection(id: string){
+    const element = document.getElementById(id) as HTMLDivElement
+
+    if(element){
+        element.scrollIntoView({behavior: 'smooth'})
+    }
 }
 </script>
 

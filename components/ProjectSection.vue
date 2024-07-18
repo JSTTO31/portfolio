@@ -1,5 +1,5 @@
 <template>
-     <v-container class="py-15">
+     <v-container class="py-15" id="project">
             <div class="w-100 d-flex justify-center flex-column align-center">
                 <div style="width: 800px" class="">
                     <h1 class="text-center" style="z-index: 10;">My Journey Through Web Development Excellence</h1>

@@ -1,6 +1,6 @@
 <template>
     <div>
-        <v-container class="py-15 pt-0 d-flex justify-center flex-column">
+        <v-container id="about-me" class="py-15 pt-0 d-flex justify-center flex-column">
             <v-row class="mt-15">
                 <v-col cols="7" class="pr-10">
                     <div style="width: 250px" class=" mb-5">
