@@ -26,7 +26,7 @@
                 <h1 style="font-size: 35px" class="font-weight-bold text-white">JS.</h1>
             </div>
             <v-spacer></v-spacer>
-            <div class="d-flex" style="gap: 5px">
+            <div class="d-lg-flex d-none" style="gap: 5px">
                 <v-btn variant="text" @click="goToSection('home')" class="text-capitalize font-weight-medium">Home</v-btn>
                 <v-btn variant="text" @click="goToSection('about-me')" class="text-capitalize font-weight-medium">About me</v-btn>
                 <v-btn variant="text" @click="goToSection('service')" class="text-capitalize font-weight-medium">Services</v-btn>
@@ -75,12 +75,6 @@ onMounted(() => {
 </script>
 
 <style scoped>
-body{
-  scroll-behavior: smooth;
-
-}
-
-
 #main{
   scroll-behavior: smooth;
 
@@ -90,7 +84,6 @@ body{
     position: fixed;
     bottom: 20px;
     right: 20px;
-    z-index: 1000;
 }
 
 .portfolio-card {

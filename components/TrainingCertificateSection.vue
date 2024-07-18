@@ -9,7 +9,7 @@
             <p class="mt-n2">Recognitions and Achievements</p>
         </div>
         <v-row class="mt-5">
-            <v-col cols="4">
+            <v-col cols="12" lg="4">
                 <v-card class="w-100 pa-5 rounded-lg">
                     <div class="mb-5 d-flex">
                         <v-avatar class="rounded-0">
@@ -30,7 +30,7 @@
                             href="https://www.inventivemedia.com.ph/">Inventive Media</a> Internship</p>
                 </v-card>
             </v-col>
-            <v-col cols="4">
+            <v-col cols="12" lg="4">
                 <v-card class="w-100 pa-5 rounded-lg">
                     <div class="mb-5 d-flex">
                         <v-avatar size="45" class="mr-5 rounded-0">
@@ -48,7 +48,7 @@
 
                 </v-card>
             </v-col>
-            <v-col cols="4">
+            <v-col cols="12" lg="4">
                 <v-card class="w-100 pa-5 rounded-lg">
                     <div class="mb-5 d-flex">
                         <v-avatar size="45" class="mr-5 rounded-0">
@@ -63,7 +63,7 @@
 
                 </v-card>
             </v-col>
-            <v-col cols="4">
+            <v-col cols="12" lg="4">
                 <v-card class="w-100 pa-5 rounded-lg">
                     <div class="mb-5 d-flex">
                         <v-avatar size="45" class="mr-5 rounded-0">
@@ -78,7 +78,7 @@
                         computing and Azure services.</p>
                 </v-card>
             </v-col>
-            <v-col cols="4">
+            <v-col cols="12" lg="4">
                 <v-card class="w-100 pa-5 rounded-lg">
                     <div class="mb-5 d-flex">
                         <v-avatar size="45" class="mr-5 rounded-0">
@@ -92,7 +92,7 @@
                         programming and application development.</p>
                 </v-card>
             </v-col>
-            <v-col cols="4">
+            <v-col cols="12" lg="4">
                 <v-card class="w-100 pa-5 rounded-lg">
                     <div class="mb-5 d-flex">
                         <v-avatar size="45" class="mr-5 rounded-0">

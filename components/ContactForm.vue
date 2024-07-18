@@ -12,17 +12,17 @@
         <v-btn type="submit" :loading="loading" class="py-5 text-capitalize" block color="deep-purple">Submit</v-btn>
     </v-form>
     <v-dialog width="650" v-model="showDialog" :persistent="loading" @click:outside="onClickOutside">
-        <v-card class="rounded-lg d-flex flex-column align-center py-15" height="490" v-if="!loading">
+        <v-card class="rounded-lg d-flex px-10 flex-column align-center py-15" height="490" v-if="!loading">
             <v-avatar size="200">
                 <nuxt-img class="w-100" src="/sent.png"></nuxt-img>
             </v-avatar>
-            <h1 class="mt-10">Appreciate Your Message</h1>
-            <p>I appreciate your message and look forward to connecting with you soon</p>
+            <h2 class="mt-10">Appreciate Your Message</h2>
+            <p class="text-center">I appreciate your message and look forward to connecting with you soon</p>
         </v-card>
         <v-card class="rounded-lg d-flex flex-column align-center justify-center py-15" height="490" v-else> 
             <v-progress-circular indeterminate size="200" width="8" color="deep-purple"></v-progress-circular>
-            <h1 class="mt-10">Please Wait...</h1>
-            <p>Please wait as the email from my portfolio may take a moment to send.</p>
+            <h2 class="mt-10 text-center">Please Wait...</h2>
+            <p class="text-center">Please wait as the email from my portfolio may take a moment to send.</p>
         </v-card>
     </v-dialog>
 </template>

@@ -6,14 +6,14 @@
                 <div style="height: 12px;width: 100%;z-index: 5" class="bg-deep-purple-lighten-2 mt-n3 rounded-pill">
                 </div>
             </div>
-            <p style="font-size: 17px;" class="mt-3 font-weight-medium">Explore My Skills and Services in Web
+            <p style="font-size: 17px;" class="mt-3 font-weight-medium text-center">Explore My Skills and Services in Web
                 Development</p>
         </div>
         <v-row class="mt-15">
-            <v-col cols="6" v-for="service in services" :key="service.title">
+            <v-col cols="12" lg="6" v-for="service in services" :key="service.title">
                   <v-card style="user-select: none"
                       :style="{ borderLeft: '5px solid #673AB7' }"
-                      class="rounded-lg pa-5 rounded-lg" height="250">
+                      class="rounded-lg pa-5 rounded-lg" height="280">
                       <v-avatar size="50" class="rounded-0 mb-4">
                           <nuxt-img class="w-100" :src="service.icon + '.png'"></nuxt-img>
                       </v-avatar>

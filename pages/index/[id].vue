@@ -18,19 +18,23 @@
                 </template>
             </v-carousel>
         </v-col>
+        <v-avatar size="60" v-if="isSupported && orientation == 'portrait-primary'" class="border" id="phone-rotate">
+            <nuxt-img class="w-100" src="/phone-rotate.gif"></nuxt-img>
+        </v-avatar>
     </v-container>
 </template>
 
 <script setup lang="ts">
+import { useScreenOrientation } from '@vueuse/core'
 import type { PortfolioType } from '~/composables/usePortfolioObject';
 const route = useRoute()
+const {isSupported, orientation} = useScreenOrientation()
 definePageMeta({
     validate: async (route) => {
         const portfolio = usePortfolioObject().find(item => item.id == route.params.id)
         return !!portfolio
     }
 })
-
 const portfolio = usePortfolioObject().find(item => item.id == route.params.id) as PortfolioType
 
 useSeoMeta({
@@ -42,6 +46,13 @@ useSeoMeta({
 </script>
 
 <style scoped>
+#phone-rotate{
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
 .carousel-image {
     position: absolute;
     width: 100%;

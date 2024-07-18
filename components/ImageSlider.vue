@@ -1,22 +1,24 @@
 <template>
     <div class="w-100">
-        <v-card class="slider-container bg-transparent" flat>
-            <v-icon class="mx-15" size="60" color="grey-darken-1">mdi-vuejs</v-icon>
-            <v-icon class="mx-15" size="60" color="grey-darken-1">mdi-nuxt</v-icon>
-            <v-icon class="mx-15" size="60" color="grey-darken-1">mdi-react</v-icon>
-            <v-icon class="mx-15" size="60" color="grey-darken-1">mdi-laravel</v-icon>
-            <v-icon class="mx-15" size="60" color="grey-darken-1">mdi-nodejs</v-icon>
-            <v-icon class="mx-15" size="60" color="grey-darken-1">mdi-vuetify</v-icon>
-            <v-icon class="mx-15" size="60" color="grey-darken-1">mdi-bootstrap</v-icon>
-            <v-icon class="mx-15" size="60" color="grey-darken-1">mdi-tailwind</v-icon>
-            <v-icon class="mx-15" size="60" color="grey-darken-1">mdi-vuejs</v-icon>
-            <v-icon class="mx-15" size="60" color="grey-darken-1">mdi-nuxt</v-icon>
-            <v-icon class="mx-15" size="60" color="grey-darken-1">mdi-react</v-icon>
-            <v-icon class="mx-15" size="60" color="grey-darken-1">mdi-laravel</v-icon>
-            <v-icon class="mx-15" size="60" color="grey-darken-1">mdi-nodejs</v-icon>
-            <v-icon class="mx-15" size="60" color="grey-darken-1">mdi-vuetify</v-icon>
-            <v-icon class="mx-15" size="60" color="grey-darken-1">mdi-bootstrap</v-icon>
-            <v-icon class="mx-15" size="60" color="grey-darken-1">mdi-tailwind</v-icon>
+        <v-card style="overflow: hidden" class="bg-transparent" flat>
+            <v-card class="slider-container bg-transparent" flat>
+                <v-icon class="mx-15" size="60" color="grey-darken-1">mdi-vuejs</v-icon>
+                <v-icon class="mx-15" size="60" color="grey-darken-1">mdi-nuxt</v-icon>
+                <v-icon class="mx-15" size="60" color="grey-darken-1">mdi-react</v-icon>
+                <v-icon class="mx-15" size="60" color="grey-darken-1">mdi-laravel</v-icon>
+                <v-icon class="mx-15" size="60" color="grey-darken-1">mdi-nodejs</v-icon>
+                <v-icon class="mx-15" size="60" color="grey-darken-1">mdi-vuetify</v-icon>
+                <v-icon class="mx-15" size="60" color="grey-darken-1">mdi-bootstrap</v-icon>
+                <v-icon class="mx-15" size="60" color="grey-darken-1">mdi-tailwind</v-icon>
+                <v-icon class="mx-15" size="60" color="grey-darken-1">mdi-vuejs</v-icon>
+                <v-icon class="mx-15" size="60" color="grey-darken-1">mdi-nuxt</v-icon>
+                <v-icon class="mx-15" size="60" color="grey-darken-1">mdi-react</v-icon>
+                <v-icon class="mx-15" size="60" color="grey-darken-1">mdi-laravel</v-icon>
+                <v-icon class="mx-15" size="60" color="grey-darken-1">mdi-nodejs</v-icon>
+                <v-icon class="mx-15" size="60" color="grey-darken-1">mdi-vuetify</v-icon>
+                <v-icon class="mx-15" size="60" color="grey-darken-1">mdi-bootstrap</v-icon>
+                <v-icon class="mx-15" size="60" color="grey-darken-1">mdi-tailwind</v-icon>
+            </v-card>
         </v-card>
     </div>
 </template>
