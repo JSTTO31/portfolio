@@ -12,13 +12,13 @@
                 </p>
                 <v-form class="mt-10" @submit.prevent="submit">
                     <label for="name">Name</label>
-                    <v-text-field v-model="form.name" color="deep-purple" single-line class="mt-2" id="name" label="name"
+                    <v-text-field v-model="$v.name.$model" :error-messages="$v.name.$errors[0]?.$message.toString() || ''" color="deep-purple" single-line class="mt-2" id="name" label="name"
                         variant="outlined" required></v-text-field>
                     <label for="email">Email Address</label>
-                    <v-text-field v-model="form.email" type="email" color="deep-purple" single-line class="mt-2" id="email" label="email address"
+                    <v-text-field v-model="$v.email.$model" :error-messages="$v.email.$errors[0]?.$message.toString() || ''" type="email" color="deep-purple" single-line class="mt-2" id="email" label="email address"
                         variant="outlined" required></v-text-field>
                     <label for="message">Message</label>
-                    <v-textarea v-model="form.message" rows="5" color="deep-purple" single-line class="mt-2" id="message" label="message"
+                    <v-textarea v-model="$v.message.$model"  rows="5" color="deep-purple" single-line class="mt-2" id="message" label="message"
                         variant="outlined"></v-textarea>
                     <v-btn type="submit" class="py-5 text-capitalize" block color="deep-purple">Submit</v-btn>
                 </v-form>
@@ -44,18 +44,30 @@
 </template>
 
 <script setup lang="ts">
+import useVuelidate from '@vuelidate/core';
+import { email, required } from '@vuelidate/validators';
+
 const form = reactive({
     name: '',
     email: '',
     message: '',
 })
 
+const rules = {
+    name: {required},
+    email: {required, email},
+    message: {}
+}
 
-
+const $v = useVuelidate(rules, form)
 
 async function submit(){
-    console.log('triggered');
-    
+    if($v.value.$invalid) return $v.value.$touch();
+
+    await useFetch("https://formsubmit.co/el/meraye",{
+        method: 'POST',
+        body: form
+    })
 }
 </script>
 
