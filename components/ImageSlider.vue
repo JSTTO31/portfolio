@@ -35,7 +35,7 @@
     gap: 15px;
     perspective: 100px;
     overflow: visible;
-    animation: scroll 40s linear infinite;
+    animation: scroll 30s linear infinite;
 }
 
 @keyframes scroll {
@@ -44,7 +44,7 @@
     }
 
     100%{
-        transform: translateX(calc(-200px * 7));
+        transform: translateX(calc(-60px * 7));
     }
 }
 </style>

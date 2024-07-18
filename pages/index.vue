@@ -1,5 +1,5 @@
 <template>
-    <v-main class="bg-deep-purple-lighten-5 pb-15" id="main">
+    <v-main class="bg-deep-purple-lighten-5 pb-15" id="main" :style="name == 'xl' ? 'padding-inline: 300px' : ''">
         <home-section></home-section>
         <about-me-section></about-me-section>
         <service-section></service-section>
@@ -44,6 +44,8 @@
 </template>
 
 <script setup lang="ts">
+import {useDisplay} from 'vuetify'
+const {name} = useDisplay()
 const showUp = ref(false)
 
 function visit(url: string){
