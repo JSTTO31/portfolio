@@ -1,8 +1,15 @@
 <template>
-    <v-card class="portfolio-card rounded-lg" @click="$router.push({ name: 'index-id', params: { id: portfolio.id } })">
-        <nuxt-img class="w-100" :src="portfolio.location + `/${portfolio.active_image}.png`"></nuxt-img>
+    <v-card class="portfolio-card rounded-lg">
+        <v-hover v-slot="{props, isHovering}">
+            <v-card v-bind="props" class="rounded-0" flat @click.stop="$router.push({ name: 'index-id', params: { id: portfolio.id } })">
+                <nuxt-img id="image" class="w-100" :src="portfolio.location + `/${portfolio.active_image}.png`"></nuxt-img>
+                <v-overlay contained persistent no-click-animation :model-value="isHovering" class="d-flex justify-center align-center">
+                    <v-btn variant="outlined" class="font-weight-medium" color="white">View Images</v-btn>
+                </v-overlay>
+            </v-card>
+        </v-hover>
         <div class="pa-5">
-            <h3 class="font-weight-bold">{{ portfolio.title }}</h3>
+            <h3 @click="$router.push({ name: 'index-id', params: { id: portfolio.id } })" class="font-weight-bold underline">{{ portfolio.title }}</h3>
             <div class="mt-2 d-flex" style="gap: 5px">
                 <v-icon size="30" v-for="icon in portfolio.icons" :key="icon">{{icon}}</v-icon>
             </div>
@@ -32,4 +39,18 @@ function visit(url: string){
 }
 </script>
 
-<style scoped></style>
+<style scoped>
+#image{
+    -webkit-user-drag: none;
+    user-select: none;
+}
+
+.underline:hover{
+    cursor: pointer;
+    text-decoration: underline
+}
+
+.underline:active{
+    color: #673AB7;
+}
+</style>
