@@ -17,8 +17,8 @@
             <v-spacer></v-spacer>
             <v-btn class="text-capitalize" color="deep-purple">Contact me</v-btn>
         </div>
-        <v-row class="" style="padding-block: 100px;">
-            <v-col cols="7">
+        <v-row style="padding-block: 100px;">
+            <v-col cols="12" lg="7">
                 <h1 style="font-size: 45px">Aspiring Fullstack Developer</h1>
                 <p style="font-size: 20px;">
                     👋 Hi, I'm Joshua Sotto, an ambitious web developer passionate about frontend and backend
@@ -32,7 +32,7 @@
                 <v-btn class="text-capitalize mt-5 rounded-lg" color="deep-purple" size="large"
                     prepend-icon="mdi-download">Download my CV</v-btn>
             </v-col>
-            <v-col cols="5" class="d-flex justify-center">
+            <v-col cols="12" lg="5" class="d-flex justify-center">
                 <v-avatar size="400" class="bg-deep-purple pt-5 px-5">
                     <v-img src="profile-image.png"></v-img>
                 </v-avatar>
