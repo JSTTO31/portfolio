@@ -10,18 +10,7 @@
                 </div>
                 <p class="mt-n2">Please contact me for job opportunities or questions. I am excited to join your team
                 </p>
-                <v-form class="mt-10" @submit.prevent="submit">
-                    <label for="name">Name</label>
-                    <v-text-field v-model="$v.name.$model" :error-messages="$v.name.$errors[0]?.$message.toString() || ''" color="deep-purple" single-line class="mt-2" id="name" label="name"
-                        variant="outlined" required></v-text-field>
-                    <label for="email">Email Address</label>
-                    <v-text-field v-model="$v.email.$model" :error-messages="$v.email.$errors[0]?.$message.toString() || ''" type="email" color="deep-purple" single-line class="mt-2" id="email" label="email address"
-                        variant="outlined" required></v-text-field>
-                    <label for="message">Message</label>
-                    <v-textarea v-model="$v.message.$model"  rows="5" color="deep-purple" single-line class="mt-2" id="message" label="message"
-                        variant="outlined"></v-textarea>
-                    <v-btn type="submit" class="py-5 text-capitalize" block color="deep-purple">Submit</v-btn>
-                </v-form>
+                <contact-form></contact-form>
             </v-col>
             <v-col cols="6">
                 <nuxt-img class="w-100" src="/contact.svg"></nuxt-img>
@@ -40,40 +29,12 @@
                 </div>
             </v-col>
         </v-row>
+ 
     </v-container>
 </template>
 
 <script setup lang="ts">
-import useVuelidate from '@vuelidate/core';
-import { email, required } from '@vuelidate/validators';
 
-const form = reactive({
-    name: '',
-    email: '',
-    message: '',
-})
-
-const rules = {
-    name: {required},
-    email: {required, email},
-    message: {}
-}
-
-const $v = useVuelidate(rules, form)
-
-const loading = ref(false)
-
-async function submit(){
-    if($v.value.$invalid) return $v.value.$touch();
-    loading.value = true
-    await useFetch("https://formsubmit.co/25494812c1d7e6c3649ce9c1312f036c ",{
-        method: 'POST',
-        body: form
-    })
-
-    loading.value = false
-
-}
 </script>
 
 <style scoped></style>

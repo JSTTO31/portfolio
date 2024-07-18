@@ -15,11 +15,17 @@
                 <v-tab slider-color="deep-purple" class="text-capitalize font-weight-medium">Testimonials</v-tab>
             </v-tabs>
             <v-spacer></v-spacer>
-            <v-hover v-slot="{props, isHovering}">
-                <v-btn class="text-capitalize" v-bind="props" :variant="isHovering ? 'flat' : 'outlined'" prepend-icon="mdi-email" color="black">Send a
-                    message</v-btn>
-
-            </v-hover>
+            <v-dialog width="750">
+                <template #activator="{props:activator}">
+                        <v-btn class="text-capitalize" v-bind="activator" variant="outlined" prepend-icon="mdi-email" color="black">Send message</v-btn>
+                </template>
+                <template #default="{isActive}">
+                    <v-card class="pa-10 rounded-lg">
+                        <h2 class="mb-5">Send message</h2>
+                        <contact-form @success="isActive.value = false"></contact-form>
+                    </v-card>
+                </template>
+            </v-dialog>
         </div>
         <v-row style="padding-block: 100px;">
             <v-col cols="12" lg="7">
