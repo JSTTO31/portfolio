@@ -32,9 +32,9 @@
                 <v-btn variant="text" class="text-capitalize font-weight-medium">Testimonials</v-btn>
             </div>
             <v-spacer></v-spacer>
-            <v-icon class="ml-3" size="35">mdi-github</v-icon>
-            <v-icon class="ml-3" size="35" color="blue-darken-1 bg-white pa-0 rounded-circle">mdi-facebook</v-icon>
-            <v-icon class="ml-3" size="35" color="blue-darken-3 bg-white pa-0 rounded-lg">mdi-linkedin</v-icon>
+            <v-icon @click="visit('https://github.com/JSTTO31')" class="ml-3" size="35">mdi-github</v-icon>
+            <v-icon @click="visit('https://www.facebook.com/james.rei.3538')" class="ml-3" size="35" color="blue-darken-1 bg-white pa-0 rounded-circle">mdi-facebook</v-icon>
+            <v-icon @click="visit('https://www.linkedin.com/in/joshua-sotto-b5a199288/')" class="ml-3" size="35" color="blue-darken-3 bg-white pa-0 rounded-lg">mdi-linkedin</v-icon>
         </v-container>
     </v-footer>
 </template>
@@ -42,7 +42,9 @@
 <script setup lang="ts">
 
 
-
+function visit(url: string){
+    window.open(url, "_blank")
+}
 </script>
 
 <style scoped>
