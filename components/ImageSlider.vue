@@ -1,8 +1,22 @@
 <template>
-    <div class="w-100 py-15 mt-15">
-        <v-card class="slider-container">
-            <nuxt-img :src="`/my-images/${n}.jpg`" v-for="n in 7" class="rounded slider-item" />
-            <nuxt-img :src="`/my-images/${n}.jpg`" v-for="n in 7" class="rounded slider-item" />
+    <div class="w-100">
+        <v-card class="slider-container bg-transparent" flat>
+            <v-icon class="mx-15" size="60" color="grey-darken-1">mdi-vuejs</v-icon>
+            <v-icon class="mx-15" size="60" color="grey-darken-1">mdi-nuxt</v-icon>
+            <v-icon class="mx-15" size="60" color="grey-darken-1">mdi-react</v-icon>
+            <v-icon class="mx-15" size="60" color="grey-darken-1">mdi-laravel</v-icon>
+            <v-icon class="mx-15" size="60" color="grey-darken-1">mdi-nodejs</v-icon>
+            <v-icon class="mx-15" size="60" color="grey-darken-1">mdi-vuetify</v-icon>
+            <v-icon class="mx-15" size="60" color="grey-darken-1">mdi-bootstrap</v-icon>
+            <v-icon class="mx-15" size="60" color="grey-darken-1">mdi-tailwind</v-icon>
+            <v-icon class="mx-15" size="60" color="grey-darken-1">mdi-vuejs</v-icon>
+            <v-icon class="mx-15" size="60" color="grey-darken-1">mdi-nuxt</v-icon>
+            <v-icon class="mx-15" size="60" color="grey-darken-1">mdi-react</v-icon>
+            <v-icon class="mx-15" size="60" color="grey-darken-1">mdi-laravel</v-icon>
+            <v-icon class="mx-15" size="60" color="grey-darken-1">mdi-nodejs</v-icon>
+            <v-icon class="mx-15" size="60" color="grey-darken-1">mdi-vuetify</v-icon>
+            <v-icon class="mx-15" size="60" color="grey-darken-1">mdi-bootstrap</v-icon>
+            <v-icon class="mx-15" size="60" color="grey-darken-1">mdi-tailwind</v-icon>
         </v-card>
     </div>
 </template>
@@ -13,7 +27,6 @@
 
 <style scoped>
 .slider-container{
-    height: 350px;
     overflow-x: scroll;
     background-color: transparent;
     display: flex;
@@ -23,31 +36,13 @@
     animation: scroll 40s linear infinite;
 }
 
-.slider-container:hover{
-    animation-play-state: paused
-}
-
-
-.slider-item{
-    width: 500px;
-    transition: transform .25s ease;
-    z-index: 20px;
-
-}
-
-.slider-item:hover{
-    transform: scale(1.2);
-    z-index: 100px;
-}
-
-
 @keyframes scroll {
     0%{
         transform: translateX(0);
     }
 
     100%{
-        transform: translateX(calc(-500px * 7));
+        transform: translateX(calc(-200px * 7));
     }
 }
 </style>

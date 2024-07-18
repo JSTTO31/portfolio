@@ -15,7 +15,11 @@
                 <v-tab slider-color="deep-purple" class="text-capitalize font-weight-medium">Testimonials</v-tab>
             </v-tabs>
             <v-spacer></v-spacer>
-            <v-btn class="text-capitalize" color="deep-purple">Contact me</v-btn>
+            <v-hover v-slot="{props, isHovering}">
+                <v-btn class="text-capitalize" v-bind="props" :variant="isHovering ? 'flat' : 'outlined'" prepend-icon="mdi-email" color="black">Send a
+                    message</v-btn>
+
+            </v-hover>
         </div>
         <v-row style="padding-block: 100px;">
             <v-col cols="12" lg="7">
@@ -25,9 +29,9 @@
                     development. 💻✨
                 </p>
                 <div class="pt-5 d-flex " style="gap: 15px">
-                    <v-icon size="45">mdi-github</v-icon>
-                    <v-icon size="45" color="blue-darken-1">mdi-facebook</v-icon>
-                    <v-icon size="45" color="blue-darken-3">mdi-linkedin</v-icon>
+                    <v-icon @click="visit('https://github.com/JSTTO31')" size="45">mdi-github</v-icon>
+                    <v-icon @click="visit('https://www.facebook.com/james.rei.3538')" size="45" color="blue-darken-1">mdi-facebook</v-icon>
+                    <v-icon @click="visit('https://www.linkedin.com/in/joshua-sotto-b5a199288/')" size="45" color="blue-darken-3">mdi-linkedin</v-icon>
                 </div>
                 <v-btn class="text-capitalize mt-5 rounded-lg" color="deep-purple" size="large"
                     prepend-icon="mdi-download">Download my CV</v-btn>
@@ -39,20 +43,14 @@
             </v-col>
         </v-row>
     </v-container>
-    <marquee>
-        <v-icon class="mx-15" size="60" color="grey-darken-1">mdi-vuejs</v-icon>
-        <v-icon class="mx-15" size="60" color="grey-darken-1">mdi-nuxt</v-icon>
-        <v-icon class="mx-15" size="60" color="grey-darken-1">mdi-react</v-icon>
-        <v-icon class="mx-15" size="60" color="grey-darken-1">mdi-laravel</v-icon>
-        <v-icon class="mx-15" size="60" color="grey-darken-1">mdi-nodejs</v-icon>
-        <v-icon class="mx-15" size="60" color="grey-darken-1">mdi-vuetify</v-icon>
-        <v-icon class="mx-15" size="60" color="grey-darken-1">mdi-bootstrap</v-icon>
-        <v-icon class="mx-15" size="60" color="grey-darken-1">mdi-tailwind</v-icon>
-    </marquee>
+    <image-slider></image-slider>
 </template>
 
 <script setup lang="ts">
 
+function visit(url: string){
+    window.open(url, "_blank")
+}
 </script>
 
 <style scoped></style>
