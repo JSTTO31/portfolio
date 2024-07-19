@@ -8,9 +8,9 @@
             </div>
             <p class="mt-n2">Recognitions and Achievements</p>
         </div>
-        <v-row class="mt-5">
-            <v-col cols="12" lg="4">
-                <v-card class="w-100 pa-5 rounded-lg">
+        <v-row class="mt-5 ">
+            <v-col cols="12" md="6" lg="4" >
+                <v-card class="w-100 pa-5 h-100 rounded-lg">
                     <div class="mb-5 d-flex">
                         <v-avatar class="rounded-0">
                             <nuxt-img class="w-100" src="/logos/html.png"></nuxt-img>
@@ -25,13 +25,13 @@
                         </v-avatar>
                     </div>
                     <h3>HTML, CSS, and Bootstrap Certification</h3>
-                    <p class="text-subtitle-2 text-grey-darken-2">HTML, CSS, and Bootstrap Certification from <a
-                            target="_blank" class="text-decoration-none font-weight-bold text-blue-darken-4"
-                            href="https://www.inventivemedia.com.ph/">Inventive Media</a> Internship</p>
+                    <p class="text-subtitle-2 text-grey-darken-2">HTML, CSS, and Bootstrap Certification Achieved During My Internship Experience at <a target="_blank"
+                            class="text-decoration-none font-weight-bold text-blue-darken-4"
+                            href="https://www.inventivemedia.com.ph/">Inventive Media</a></p>
                 </v-card>
             </v-col>
-            <v-col cols="12" lg="4">
-                <v-card class="w-100 pa-5 rounded-lg">
+            <v-col cols="12" md="6" lg="4" >
+                <v-card class="w-100 pa-5 h-100 rounded-lg">
                     <div class="mb-5 d-flex">
                         <v-avatar size="45" class="mr-5 rounded-0">
                             <nuxt-img class="w-100" src="/logos/php.png"></nuxt-img>
@@ -48,8 +48,8 @@
 
                 </v-card>
             </v-col>
-            <v-col cols="12" lg="4">
-                <v-card class="w-100 pa-5 rounded-lg">
+            <v-col cols="12" md="6" lg="4" >
+                <v-card class="w-100 pa-5 h-100 rounded-lg">
                     <div class="mb-5 d-flex">
                         <v-avatar size="45" class="mr-5 rounded-0">
                             <nuxt-img class="w-100" src="/logos/wordpress.png"></nuxt-img>
@@ -63,8 +63,8 @@
 
                 </v-card>
             </v-col>
-            <v-col cols="12" lg="4">
-                <v-card class="w-100 pa-5 rounded-lg">
+            <v-col cols="12" md="6" lg="4" >
+                <v-card class="w-100 pa-5 h-100 rounded-lg">
                     <div class="mb-5 d-flex">
                         <v-avatar size="45" class="mr-5 rounded-0">
                             <nuxt-img class="w-100" src="/logos/azure.png"></nuxt-img>
@@ -78,8 +78,8 @@
                         computing and Azure services.</p>
                 </v-card>
             </v-col>
-            <v-col cols="12" lg="4">
-                <v-card class="w-100 pa-5 rounded-lg">
+            <v-col cols="12" md="6" lg="4" >
+                <v-card class="w-100 pa-5 h-100 rounded-lg">
                     <div class="mb-5 d-flex">
                         <v-avatar size="45" class="mr-5 rounded-0">
                             <nuxt-img class="w-100" src="/logos/python.png"></nuxt-img>
@@ -92,8 +92,8 @@
                         programming and application development.</p>
                 </v-card>
             </v-col>
-            <v-col cols="12" lg="4">
-                <v-card class="w-100 pa-5 rounded-lg">
+            <v-col cols="12" md="6" lg="4" >
+                <v-card class="w-100 pa-5 h-100 rounded-lg">
                     <div class="mb-5 d-flex">
                         <v-avatar size="45" class="mr-5 rounded-0">
                             <nuxt-img class="w-100" src="/logos/illustrator.png"></nuxt-img>

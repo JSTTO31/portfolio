@@ -1,7 +1,7 @@
 <template>
     <v-container id="contact">
         <v-row class="mt-15">
-            <v-col cols="12" lg="6" class="px-5 pl-lg-0 pr-lg-10">
+            <v-col cols="12" md="8" lg="6" class="px-5 pl-lg-0 pr-lg-10">
                 <div class="d-flex justify-center d-lg-block">
                     <div style="width: 210px" class=" mb-5">
                         <h1 class="text-center" style="z-index: 10;">Get in touch</h1>
@@ -14,7 +14,7 @@
                 </p>
                 <contact-form></contact-form>
             </v-col>
-            <v-col cols="12" lg="6">
+            <v-col cols="12" md="8" lg="6">
                 <nuxt-img class="w-100 d-none d-lg-block" src="/contact.svg"></nuxt-img>
                 <div class="pt-15">
                     <div style="font-size: 17px;" class="text-deep-purple mb-4 d-flex align-center">

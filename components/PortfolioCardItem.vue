@@ -5,7 +5,7 @@
                 @click.stop="$router.push({ name: 'index-id', params: { id: portfolio.id } })">
                 <nuxt-img id="image" class="w-100"
                     :src="portfolio.location + `/${portfolio.active_image}.png`"></nuxt-img>
-                <v-overlay contained persistent no-click-animation :model-value="isHovering"
+                <v-overlay contained persistent no-click-animation :model-value="!!isHovering"
                     class="d-flex justify-center align-center">
                     <v-btn variant="outlined" class="font-weight-medium" color="white">View Images</v-btn>
                 </v-overlay>
@@ -13,7 +13,7 @@
         </v-hover>
         <div class="pa-5">
             <h3 @click="$router.push({ name: 'index-id', params: { id: portfolio.id } })"
-                class="font-weight-bold underline">{{ portfolio.title }}</h3>
+                class="text-xs-h6 text-lg-h6 text-md-subtitle-2 font-weight-bold underline">{{ portfolio.title }}</h3>
             <div class="mt-2 d-flex" style="gap: 5px">
                 <v-icon size="30" v-for="icon in portfolio.icons" :key="icon">{{ icon }}</v-icon>
             </div>
@@ -32,7 +32,7 @@
                 <v-menu>
                     <template #activator="{ props }">
                         <v-btn v-bind="props" class="border rounded-lg text-capitalize" flat
-                            append-icon="mdi-chevron-down" prepend-icon="mdi-github">Github source</v-btn>
+                            append-icon="mdi-chevron-down" prepend-icon="mdi-github" v-if="!(name == 'lg' || name == 'xl')">Github source</v-btn>
                     </template>
                     <v-list>
                         <v-list-item prepend-icon="mdi-github" class="rounded-lg text-capitalize"

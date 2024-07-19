@@ -6,34 +6,44 @@
                 <h1 class="font-weight-bold text-grey-darken-4">JS.</h1>
             </div>
             <v-spacer></v-spacer>
-            <v-tabs class="d-none d-lg-block">
-                <v-tab @click="goToSection('home')" slider-color="deep-purple" class="text-capitalize font-weight-medium">Home</v-tab>
-                <v-tab @click="goToSection('about-me')" slider-color="deep-purple" class="text-capitalize font-weight-medium">About me</v-tab>
-                <v-tab @click="goToSection('service')" slider-color="deep-purple" class="text-capitalize font-weight-medium">Services</v-tab>
-                <v-tab @click="goToSection('project')" slider-color="deep-purple" class="text-capitalize font-weight-medium">Portfolio</v-tab>
-                <v-tab @click="goToSection('skill')" slider-color="deep-purple" class="text-capitalize font-weight-medium">Skills</v-tab>
-                <v-tab @click="goToSection('training')" slider-color="deep-purple" class="text-capitalize font-weight-medium">Certificates</v-tab>
-                <v-tab @click="goToSection('contact')" slider-color="deep-purple" class="text-capitalize font-weight-medium">Contact</v-tab>
+            <v-tabs class="d-none d-md-flex" >
+                <v-tab :density="name == 'md' ? 'compact' : 'comfortable'" @click="goToSection('home')" slider-color="deep-purple" class="text-capitalize font-weight-medium">Home</v-tab>
+                <v-tab :density="name == 'md' ? 'compact' : 'comfortable'" @click="goToSection('about-me')" slider-color="deep-purple" class="text-capitalize font-weight-medium">About me</v-tab>
+                <v-tab :density="name == 'md' ? 'compact' : 'comfortable'" @click="goToSection('service')" slider-color="deep-purple" class="text-capitalize font-weight-medium">Services</v-tab>
+                <v-tab :density="name == 'md' ? 'compact' : 'comfortable'" @click="goToSection('project')" slider-color="deep-purple" class="text-capitalize font-weight-medium">Portfolio</v-tab>
+                <v-tab :density="name == 'md' ? 'compact' : 'comfortable'" @click="goToSection('skill')" slider-color="deep-purple" class="text-capitalize font-weight-medium">Skills</v-tab>
+                <v-tab :density="name == 'md' ? 'compact' : 'comfortable'" @click="goToSection('training')" slider-color="deep-purple" class="text-capitalize font-weight-medium">Certificates</v-tab>
+                <v-tab :density="name == 'md' ? 'compact' : 'comfortable'" @click="goToSection('contact')" slider-color="deep-purple" class="text-capitalize font-weight-medium">Contact</v-tab>
             </v-tabs>
-            <v-spacer></v-spacer>
+            <v-spacer class="d-none d-lg-block"></v-spacer>
             <v-dialog width="750">
                 <template #activator="{props:activator}">
                         <v-btn class="text-capitalize d-none d-lg-flex" v-bind="activator" variant="outlined" prepend-icon="mdi-email" color="black">Send message</v-btn>
                 </template>
                 <template #default="{isActive}">
-                    <v-card class="pa-10 rounded-lg">
+                    <v-card class="pa-10 pa-md-5 pa-lg-10 rounded-lg">
                         <h2 class="mb-5">Send message</h2>
                         <contact-form @success="isActive.value = false"></contact-form>
                     </v-card>
                 </template>
             </v-dialog>
-            <v-btn @click="showMenu = true" icon="mdi-menu" variant="text" size="large" class="rounded-lg border d-block d-lg-none"></v-btn>
-
+            <v-dialog width="750">
+                <template #activator="{props:activator}">
+                    <v-btn v-bind="activator" icon="mdi-email" variant="text" size="large" class="rounded-lg ml-5 border d-block d-none-lg d-none d-md-block"></v-btn>
+                </template>
+                <template #default="{isActive}">
+                    <v-card class="pa-10 pa-md-5 pa-lg-10 rounded-lg">
+                        <h3 class="mb-1">Send message</h3>
+                        <contact-form @success="isActive.value = false"></contact-form>
+                    </v-card>
+                </template>
+            </v-dialog>
+            <v-btn @click="showMenu = true" icon="mdi-menu" variant="text" size="large" class="rounded-lg border d-block d-md-none"></v-btn>
         </div>
         <v-row style="padding-block: 100px;">
-            <v-col cols="12" lg="7" class="d-flex d-lg-block justify-center flex-column">
-                <h1 style="font-size: 45px" class="text-center text-md-left">Aspiring Fullstack Developer</h1>
-                <p style="font-size: 20px;" class="text-center text-md-left">
+            <v-col cols="12" md="7" class="d-flex d-md-block justify-center flex-column">
+                <h1 style="font-size: 45px" class="text-center text-md-h4 text-lg-h3 font-weight-bold text-md-left">Aspiring Fullstack Developer</h1>
+                <p style="font-size: 20px;" class="text-center text-md-subtitle-1 text-lg-h6 font-weight-regular mt-2 text-md-left">
                     👋 Hi, I'm Joshua Sotto, an ambitious web developer passionate about frontend and backend
                     development. 💻✨
                 </p>
@@ -46,8 +56,8 @@
                     prepend-icon="mdi-download" @click="download">Download My CV</v-btn>
                 <a id="download" href="/resume.pdf" download style="visibility: hidden"></a>
             </v-col>
-            <v-col cols="12" lg="5" class="d-lg-flex justify-center d-none">
-                <v-avatar size="400" class="bg-deep-purple pt-10 px-5">
+            <v-col cols="12" md="5" class="d-md-flex justify-center d-none">
+                <v-avatar :size="name == 'md' ? 350 : 400" class="bg-deep-purple pt-10 px-5">
                     <nuxt-img class="w-100" src="profile-image.png"></nuxt-img>
                 </v-avatar>
             </v-col>
@@ -69,6 +79,8 @@
 </template>
 
 <script setup lang="ts">
+import {useDisplay} from 'vuetify'
+const {name} = useDisplay()
 const showMenu = ref(false)
 
 function visit(url: string){

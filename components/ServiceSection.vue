@@ -10,7 +10,7 @@
                 Development</p>
         </div>
         <v-row class="mt-15">
-            <v-col cols="12" lg="6" v-for="service in services" :key="service.title">
+            <v-col cols="12" md="6" v-for="service in services" :key="service.title">
                   <v-card style="user-select: none"
                       :style="{ borderLeft: '5px solid #673AB7' }"
                       class="rounded-lg pa-5 rounded-lg" height="280">
