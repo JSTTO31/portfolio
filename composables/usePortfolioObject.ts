@@ -153,8 +153,8 @@ export default () => {
         
         {
             id: 'printing-impress',
-            title: 'Printing Impress: Efficient Management for Printing Shop Expenses, Sales, and Debt',
-            paragraph: 'Printing Impress is a comprehensive application designed to manage printing shop operations effectively. Developed before my third year, it facilitates tracking expenses, monitoring sales, and managing debt, providing streamlined financial oversight for printing businesses.',
+            title: 'Printing Impress: Efficient Management for Printing Shop Expenses, Sales, and Borrow money',
+            paragraph: 'Printing Impress is a comprehensive application designed to manage printing shop operations effectively. Developed before my third year, it facilitates tracking expenses, monitoring sales, and managing borrow money, providing streamlined financial oversight for printing businesses.',
             location: '/portfolios/printing',
             images_count: 6,
             active_image: 2,
