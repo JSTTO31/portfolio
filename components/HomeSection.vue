@@ -29,7 +29,7 @@
             </v-dialog>
             <v-dialog width="750">
                 <template #activator="{props:activator}">
-                    <v-btn v-bind="activator" icon="mdi-email" variant="text" size="large" class="rounded-lg ml-5 border d-block d-none-lg d-none d-md-block"></v-btn>
+                    <v-btn v-bind="activator" icon="mdi-email" variant="text" size="large" class="rounded-lg ml-5 border d-lg-none d-none d-md-block"></v-btn>
                 </template>
                 <template #default="{isActive}">
                     <v-card class="pa-10 pa-md-5 pa-lg-10 rounded-lg">
