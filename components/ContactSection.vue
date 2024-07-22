@@ -25,6 +25,13 @@
                         </span>
                     </div>
                     <div style="font-size: 17px;" class="text-deep-purple mb-4 d-flex align-center">
+                        <v-icon>mdi-linkedin</v-icon>
+                        <span class="ml-2 font-weight-medium">
+                            <a href="https://www.linkedin.com/in/joshua-sotto-b5a199288"
+                                class="text-deep-purple">https://www.linkedin.com/in/joshua-sotto-b5a199288</a>
+                        </span>
+                    </div>
+                    <div style="font-size: 17px;" class="text-deep-purple mb-4 d-flex align-center">
                         <v-icon>mdi-phone</v-icon>
                         <span class="ml-2 font-weight-medium">+63 992993 9021</span>
                     </div>

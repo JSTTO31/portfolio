@@ -16,7 +16,8 @@
             </v-card>
         </v-dialog>
         <transition name="pop-up">
-            <v-btn v-if="showUp" @click="goUp" id="up-btn" size="x-large" color="deep-purple" icon="mdi-chevron-up"></v-btn>
+            <v-btn v-if="showUp" @click="goUp" id="up-btn" size="x-large" color="deep-purple"
+                icon="mdi-chevron-up"></v-btn>
         </transition>
     </v-main>
     <v-footer class="bg-grey-darken-4">
@@ -27,62 +28,97 @@
             </div>
             <v-spacer></v-spacer>
             <div class="d-lg-flex d-none" style="gap: 5px">
-                <v-btn variant="text" @click="goToSection('home')" class="text-capitalize font-weight-medium">Home</v-btn>
-                <v-btn variant="text" @click="goToSection('about-me')" class="text-capitalize font-weight-medium">About me</v-btn>
-                <v-btn variant="text" @click="goToSection('service')" class="text-capitalize font-weight-medium">Services</v-btn>
-                <v-btn variant="text" @click="goToSection('project')" class="text-capitalize font-weight-medium">Portfolio</v-btn>
-                <v-btn variant="text" @click="goToSection('skill')" class="text-capitalize font-weight-medium">Skills</v-btn>
-                <v-btn variant="text" @click="goToSection('training')" class="text-capitalize font-weight-medium">Certificates</v-btn>
-                <v-btn variant="text" @click="goToSection('contact')" class="text-capitalize font-weight-medium">Contact</v-btn>
+                <v-btn variant="text" @click="goToSection('home')"
+                    class="text-capitalize font-weight-medium">Home</v-btn>
+                <v-btn variant="text" @click="goToSection('about-me')" class="text-capitalize font-weight-medium">About
+                    me</v-btn>
+                <v-btn variant="text" @click="goToSection('service')"
+                    class="text-capitalize font-weight-medium">Services</v-btn>
+                <v-btn variant="text" @click="goToSection('project')"
+                    class="text-capitalize font-weight-medium">Portfolio</v-btn>
+                <v-btn variant="text" @click="goToSection('skill')"
+                    class="text-capitalize font-weight-medium">Skills</v-btn>
+                <v-btn variant="text" @click="goToSection('training')"
+                    class="text-capitalize font-weight-medium">Certificates</v-btn>
+                <v-btn variant="text" @click="goToSection('contact')"
+                    class="text-capitalize font-weight-medium">Contact</v-btn>
             </div>
             <v-spacer></v-spacer>
             <v-icon @click="visit('https://github.com/JSTTO31')" class="ml-3" size="35">mdi-github</v-icon>
-            <v-icon @click="visit('https://www.facebook.com/james.rei.3538')" class="ml-3" size="35" color="blue-darken-1 bg-white pa-0 rounded-circle">mdi-facebook</v-icon>
-            <v-icon @click="visit('https://www.linkedin.com/in/joshua-sotto-b5a199288/')" class="ml-3" size="35" color="blue-darken-3 bg-white pa-0 rounded-lg">mdi-linkedin</v-icon>
+            <v-icon @click="visit('https://www.facebook.com/james.rei.3538')" class="ml-3" size="35"
+                color="blue-darken-1 bg-white pa-0 rounded-circle">mdi-facebook</v-icon>
+            <v-icon @click="visit('https://www.linkedin.com/in/joshua-sotto-b5a199288/')" class="ml-3" size="35"
+                color="blue-darken-3 bg-white pa-0 rounded-lg">mdi-linkedin</v-icon>
         </v-container>
     </v-footer>
 </template>
 
 <script setup lang="ts">
-import {useDisplay} from 'vuetify'
-const {name} = useDisplay()
+import { useDisplay } from 'vuetify'
+const { name } = useDisplay()
 const showUp = ref(false)
 
-function visit(url: string){
+function visit(url: string) {
     window.open(url, "_blank")
 }
 
-function goUp(){
+function goUp() {
     window.scrollTo(0, 0)
 }
 
-function goToSection(id: string){
+function goToSection(id: string) {
     const element = document.getElementById(id) as HTMLDivElement
 
-    if(element){
-        element.scrollIntoView({behavior: 'smooth'})
+    if (element) {
+        element.scrollIntoView({ behavior: 'smooth' })
     }
 }
 
 onMounted(() => {
     window.addEventListener("scroll", () => {
-        if(window.scrollY > 764){
+        if (window.scrollY > 764) {
             showUp.value = true
-        }else{
+        } else {
             showUp.value = false
 
         }
     })
+
+    window.addEventListener("DOMContentLoaded", () => {
+        const project = document.getElementById('project')
+
+        if (project) {
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach((entry) => {
+                    console.log('example');
+
+                    if (entry.isIntersecting) {
+
+                        alert('example')
+                        observer.unobserve(entry.target);
+                    }
+                })
+
+
+            }, { threshold: .5 })
+
+
+            observer.observe(project)
+        }
+    })
+
+
 })
 </script>
 
 <style scoped>
-#main{
-  scroll-behavior: smooth;
+#main {
+    scroll-behavior: smooth;
 
 }
 
-#up-btn{
+#up-btn {
     position: fixed;
     bottom: 20px;
     right: 20px;
@@ -99,15 +135,13 @@ onMounted(() => {
 }
 
 
-.pop-up-enter-active, 
-.pop-up-leave-active{
+.pop-up-enter-active,
+.pop-up-leave-active {
     transition: .2s ease;
 }
 
-.pop-up-enter-from, 
-.pop-up-leave-to{
+.pop-up-enter-from,
+.pop-up-leave-to {
     transform: scale(.2) rotate(180deg);
 }
-
-
 </style>
