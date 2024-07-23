@@ -54,7 +54,7 @@
                 </div>
                 <v-btn class="text-capitalize mt-5 rounded-lg" color="deep-purple" size="large"
                     prepend-icon="mdi-download" @click="download">Download My CV</v-btn>
-                <a id="download" href="/RESUME-SOTTO.pdf" download style="visibility: hidden"></a>
+                <a id="download" href="/RESUME-JSOTTO.pdf" download style="visibility: hidden"></a>
             </v-col>
             <v-col cols="12" md="5" class="d-md-flex justify-center d-none">
                 <v-avatar :size="name == 'md' ? 350 : 400" class="bg-deep-purple pt-10 px-5">
