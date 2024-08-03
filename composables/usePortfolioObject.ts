@@ -40,9 +40,22 @@ export default () => {
             active_image: 1,
             icons: ['mdi-vuejs', 'mdi-nuxt', 'mdi-vuetify', 'mdi-nodejs'],
             available: ['lx', 'lg'],
-            source_frontend: 'https://github.com/JSTTO31/productivity',
-            source_backend: 'https://github.com/JSTTO31/productivity-api',
+            source_frontend: '',
+            source_backend: '',
             live_demo: 'https://productivity-pink.vercel.app'
+        },
+        {
+            id: 'trendy',
+            title: 'Trendy: Your Modern eCommerce App for Easy Ordering and Checkout',
+            paragraph: 'Trendy is a cutting-edge eCommerce app that allows you to browse, order, and checkout seamlessly using Laravel and Stripe. Enjoy a smooth and secure shopping experience with Trendy, your go-to app for all your shopping needs.',
+            location: '/portfolios/trendy',
+            images_count: 7,
+            active_image: 1,
+            icons: ['mdi-vuejs', 'mdi-nuxt', 'mdi-vuetify', 'mdi-laravel'],
+            available: ['lx', 'lg'],
+            source_frontend: 'https://github.com/JSTTO31/trendy-ecommerce',
+            source_backend: 'https://github.com/JSTTO31/trendy-ecommerce',
+            live_demo: 'http://trendy-ecommerce.infinityfreeapp.com'
         },
         {
             id: 'swift',

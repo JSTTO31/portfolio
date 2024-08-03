@@ -15,15 +15,19 @@
                     as an aspiring full-stack developer.</p>
             </div>
             <v-row class="mt-15">
-                <v-col cols="12" md="6" v-for="portfolio in portfolios" :key="portfolio.id">
+                <v-col cols="12" md="6" v-for="portfolio in portfolios.slice(0,show)" :key="portfolio.id">
                     <portfolio-card-item :portfolio="portfolio"></portfolio-card-item>
                 </v-col>
             </v-row>
+            <div class="d-flex justify-center">
+                <v-btn color="deep-purple" size="large" class="rounded-lg mt-15 font-weight-bold" @click="show = 13" v-if="show != 13" variant="outlined">Show More</v-btn>
+            </div>
         </v-container>
 </template>
 
 <script setup lang="ts">
 const portfolios = usePortfolioObject()
+const show = ref(12)
 </script>
 
 <style scoped>
