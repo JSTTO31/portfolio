@@ -18,7 +18,7 @@
             <v-spacer class="d-none d-lg-block"></v-spacer>
             <v-dialog width="750">
                 <template #activator="{props:activator}">
-                        <v-btn class="text-capitalize d-none d-lg-flex" v-bind="activator" variant="outlined" prepend-icon="mdi-email" color="black">Send message</v-btn>
+                        <v-btn class="text-capitalize d-none d-lg-flex" v-bind="activator" variant="outlined" rounded size="large" prepend-icon="mdi-email" color="black">Send message</v-btn>
                 </template>
                 <template #default="{isActive}">
                     <v-card class="pa-10 pa-md-5 pa-lg-10 rounded-lg">

@@ -14,7 +14,7 @@ useSeoMeta({
   ogTitle: 'Joshua Sotto Portfolio',
   description: 'Explore the portfolio of Joshua Sotto, an aspiring full-stack developer passionate about creating dynamic and responsive web applications.',
   ogDescription: 'Explore the portfolio of Joshua Sotto, an aspiring full-stack developer passionate about creating dynamic and responsive web applications.',
-  ogImage: '/landing-page.png'
+  ogImage: '/landing-page.jpg'
 })
 </script>
 <style>
