@@ -29,7 +29,7 @@ export default () => {
             available: ['lx', 'lg'],
             source_frontend: '',
             source_backend: '',
-            live_demo: 'https://alumni-frontend-production.up.railway.app'
+            live_demo: 'http://alumni-tracking.infinityfreeapp.com'
         },
         {
             id: 'efficiently',
