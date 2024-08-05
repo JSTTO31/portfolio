@@ -40,24 +40,28 @@
             </v-dialog>
             <v-btn @click="showMenu = true" icon="mdi-menu" variant="text" size="large" class="rounded-lg border d-block d-md-none"></v-btn>
         </div>
-        <v-row style="padding-block: 100px;">
-            <v-col cols="12" md="7" class="d-flex d-md-block justify-center flex-column">
-                <h1 style="font-size: 45px" class="text-center text-md-h4 text-lg-h3 font-weight-bold text-md-left">Aspiring Fullstack Developer</h1>
+        <v-row :style="{paddingBlock: (name == 'xs' || name == 'sm' ? '50px' : '100px')}" class="d-flex flex-column-reverse flex-md-row">
+            <v-col cols="12" md="7" class="d-flex d-md-block justify-center flex-column pt-5 pt-md-15">
+                <h1 style="font-size: 25px" class="text-center text-md-h4 text-lg-h3 font-weight-bold text-md-left">Aspiring Fullstack Developer</h1>
                 <p style="font-size: 20px;" class="text-center text-md-subtitle-1 text-lg-h6 font-weight-regular mt-2 text-md-left">
                     👋 Hi, I'm Joshua Sotto, an ambitious web developer passionate about frontend and backend
                     development. 💻✨
                 </p>
-                <div class="pt-5 d-flex mx-auto" style="gap: 15px">
-                    <v-icon @click="visit('https://github.com/JSTTO31')" size="45">mdi-github</v-icon>
-                    <v-icon @click="visit('https://www.facebook.com/james.rei.3538')" size="45" color="blue-darken-1">mdi-facebook</v-icon>
-                    <v-icon @click="visit('https://www.linkedin.com/in/joshua-sotto-b5a199288/')" size="45" color="blue-darken-3">mdi-linkedin</v-icon>
+                <div class="d-flex mt-2" style="gap: 15px">
+                    <v-btn rounded variant="outlined" class="text-capitalize mt-5" color="deep-purple" size="x-large"
+                   @click="download">Download CV</v-btn>
+                    <v-btn flat rounded class="text-capitalize mt-5" color="deep-purple" size="x-large"
+                        @click="goToSection('contact')">Contact me</v-btn>
+                    <a id="download" href="/RESUME-JSOTTO.pdf" download style="visibility: hidden"></a>
                 </div>
-                <v-btn class="text-capitalize mt-5 rounded-lg" color="deep-purple" size="large"
-                    prepend-icon="mdi-download" @click="download">Download My CV</v-btn>
-                <a id="download" href="/RESUME-JSOTTO.pdf" download style="visibility: hidden"></a>
+                <div class="pt-5 d-flex mx-auto" style="gap: 15px">
+                    <v-icon @click="visit('https://github.com/JSTTO31')" size="50">mdi-github</v-icon>
+                    <v-icon @click="visit('https://www.facebook.com/james.rei.3538')" size="50" color="blue-darken-1">mdi-facebook</v-icon>
+                    <v-icon @click="visit('https://www.linkedin.com/in/joshua-sotto-b5a199288/')" size="50" color="blue-darken-3">mdi-linkedin</v-icon>
+                </div>
             </v-col>
-            <v-col cols="12" md="5" class="d-md-flex justify-center d-none">
-                <v-avatar :size="name == 'md' ? 350 : 400" class="bg-deep-purple pt-10 px-5">
+            <v-col cols="12" md="5" class="d-flex justify-center">
+                <v-avatar :size="name == 'md' ? 350 : name == 'sm' || name == 'xs' ? 320 : 400" class="bg-deep-purple px-2  pt-10 px-md-5">
                     <nuxt-img class="w-100" src="profile-image.png"></nuxt-img>
                 </v-avatar>
             </v-col>

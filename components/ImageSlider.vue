@@ -44,7 +44,7 @@
     }
 
     100%{
-        transform: translateX(calc(-60px * 7));
+        transform: translateX(calc(-60px * 25));
     }
 }
 </style>

@@ -113,6 +113,9 @@ onMounted(() => {
 </script>
 
 <style scoped>
+body{
+    scroll-behavior: smooth;
+}
 #main {
     scroll-behavior: smooth;
 

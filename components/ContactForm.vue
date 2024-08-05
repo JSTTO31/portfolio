@@ -9,7 +9,7 @@
         <label for="message">Message</label>
         <v-textarea v-model="$v.message.$model"  rows="5" color="deep-purple" single-line class="mt-2" id="message" label="message"
             variant="outlined"></v-textarea>
-        <v-btn type="submit" :loading="loading" class="py-5 text-capitalize" block color="deep-purple">Submit</v-btn>
+        <v-btn type="submit" size="large" :loading="loading" class="py-5 text-capitalize" block color="deep-purple">Submit</v-btn>
     </v-form>
     <v-dialog width="650" v-model="showDialog" :persistent="loading" @click:outside="onClickOutside">
         <v-card class="rounded-lg d-flex px-10 flex-column align-center py-15" height="490" v-if="!loading">
