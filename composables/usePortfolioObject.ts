@@ -27,8 +27,8 @@ export default () => {
             active_image: 9,
             icons: ['mdi-vuejs', 'mdi-nuxt', 'mdi-vuetify', 'mdi-laravel'],
             available: ['lx', 'lg'],
-            source_frontend: '',
-            source_backend: '',
+            source_frontend: 'https://github.com/JSTTO31/alumni-frontend',
+            source_backend: 'https://github.com/JSTTO31/alumni-backend',
             live_demo: 'http://alumni-tracking.infinityfreeapp.com'
         },
         {
