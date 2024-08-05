@@ -1,5 +1,5 @@
 <template>
-    <v-main class="bg-deep-purple-lighten-5 pb-15" id="main" :style="name == 'xl' ? 'padding-inline: 300px' : ''">
+    <v-main class="bg-deep-purple-lighten-5 pb-15" id="main" :style="name == 'xl' ? 'padding-inline: 300px' : ''" style="overflow-x: hidden"> 
         <home-section></home-section>
         <about-me-section></about-me-section>
         <service-section></service-section>

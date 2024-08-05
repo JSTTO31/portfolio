@@ -1,6 +1,6 @@
 <template>
     <div>
-        <v-container id="about-me" class="py-15 pt-0 d-flex justify-center flex-column">
+        <v-container id="about-me" class="py-15 pt-0 d-flex d-block flex-column-reverse flex-md-row">
             <v-row class="mt-15">
                 <v-col cols="12" lg="7" class="px-5 pl-lg-0 pr-lg-15">
                     <div class="d-flex justify-center d-lg-block mb-5 mb-lg-0">
@@ -11,7 +11,7 @@
                             </div>
                         </div>
                     </div>
-                    <p :style="name == 'sm' || name == 'xs' ? '' : 'font-size: 20px;line-height: 40px'" class="text-justify">👋 Hi, I'm Joshua Sotto, an
+                    <p :style="name == 'sm' || name == 'xs' ? 'font-size: 17px' : 'font-size: 20px;line-height: 40px'" class="text-justify">👋 Hi, I'm Joshua Sotto, an
                         aspiring
                         full-stack developer with a passion for creating dynamic and responsive web applications. I
                         recently
@@ -19,7 +19,7 @@
                         Inventive Media, I developed several impactful projects, including an attendance system, the
                         Questify app for mock exams and icebreakers, and the Eventons event management platform. My work
                         reflects a commitment to combining innovative solutions with user-friendly design.</p><br>
-                    <p :style="name == 'sm' || name == 'xs' ? '' : 'font-size: 20px;line-height: 40px'" class="text-justify">Additionally, my third-year
+                    <p :style="name == 'sm' || name == 'xs' ? 'font-size: 17px' : 'font-size: 20px;line-height: 40px'" class="text-justify">Additionally, my third-year
                         project,
                         Canteen Kiosk, demonstrated my ability to address real-world challenges by streamlining food
                         ordering processes during the pandemic. In my fourth year, I developed Efficiently, a
@@ -31,11 +31,11 @@
                         💻✨
                     </p>
                 </v-col>
-                <v-col cols="5" class="d-none d-lg-block">
-                    <v-card class="pa-3 rounded-lg mt-15" style="transform: rotate(-10deg)">
+                <v-col cols="12" lg="5" class="d-md-flex d-block d-lg-block" style="gap: 55px">
+                    <v-card class="pa-3 w-100 w-md-50 w-lg-100 rounded-lg mt-15" style="transform: rotate(-10deg)">
                         <nuxt-img class="w-100" src="/grad-pic.jpg"></nuxt-img>
                     </v-card>
-                    <v-card class="pa-3 rounded-lg mt-15" style="transform: rotate(-10deg)">
+                    <v-card class="pa-3 w-100 w-md-50 w-lg-100 rounded-lg mt-15" style="transform: rotate(-10deg)">
                         <nuxt-img class="w-100" src="/grad-pic-2.jpg"></nuxt-img>
                     </v-card>
                 </v-col>

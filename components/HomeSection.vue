@@ -47,7 +47,7 @@
                     👋 Hi, I'm Joshua Sotto, an ambitious web developer passionate about frontend and backend
                     development. 💻✨
                 </p>
-                <div class="d-flex mt-2" style="gap: 15px">
+                <div class="d-flex justify-center justify-md-start mt-2" style="gap: 15px">
                     <v-btn rounded variant="outlined" class="text-capitalize mt-5" color="deep-purple" size="x-large"
                    @click="download">Download CV</v-btn>
                     <v-btn flat rounded class="text-capitalize mt-5" color="deep-purple" size="x-large"

@@ -11,7 +11,7 @@
 
         </div>
         <v-row class="mt-10">
-            <v-col cols="6" v-for="skill in skills" :key="skill.label">
+            <v-col cols="12" md="6" v-for="skill in skills" :key="skill.label">
                 <h3>{{ skill.label }}</h3>
                 <v-progress-linear class="rounded-pill mt-2" color="deep-purple-darken-4" height="10"
                     :model-value="skill.progress"></v-progress-linear>
