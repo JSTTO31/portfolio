@@ -29,7 +29,7 @@ export default () => {
             available: ['lx', 'lg'],
             source_frontend: 'https://github.com/JSTTO31/alumni-frontend',
             source_backend: 'https://github.com/JSTTO31/alumni-backend',
-            live_demo: 'https://alumni-tracking.infinityfreeapp.com'
+            live_demo: 'https://alumni-tracking.infinityfreeapp.com/#/'
         },
         {
             id: 'efficiently',
